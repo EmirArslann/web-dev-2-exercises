@@ -36,6 +36,7 @@ const companySalesData = [
   },
 ];
 
+<<<<<<< Updated upstream
 const calculateSalesTax = function (salesData, taxRates) {
   // Implement your code here
   const result = {};
@@ -74,3 +75,31 @@ console.log(calculateSalesTax(companySalesData, salesTaxRates));
   }
 }
 */
+=======
+const calculateSalesTax = function(salesData, taxRates) {
+    // Implement your code here
+    let result = {}
+    for(let i = 0; i < salesData.length; i++ ){
+      if(salesData.province === taxRates){
+        companySalesData.forEach((item)=>{
+        item = result
+        
+        
+        
+
+        })
+        
+       
+      }
+      
+      return result
+
+    }
+
+
+}
+
+
+
+console.log(calculateSalesTax(companySalesData, salesTaxRates));
+>>>>>>> Stashed changes
