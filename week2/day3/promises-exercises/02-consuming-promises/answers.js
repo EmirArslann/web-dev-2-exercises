@@ -1,3 +1,5 @@
+const { returnPromise } = require("../../promises/promise-generator");
+
 /**
  * 
  * EXERCISE 1
@@ -8,6 +10,10 @@
  */
 function waitForPromise(promise, action){
   /* IMPLEMENT ME */
+  setTimeout(() => {
+   return Promise(promise)
+    
+  }, action);
 }
 /**
  * 
