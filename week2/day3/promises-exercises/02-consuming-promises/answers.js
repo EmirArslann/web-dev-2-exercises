@@ -1,4 +1,4 @@
-const { returnPromise } = require("../../promises/promise-generator");
+
 
 /**
  * 
@@ -10,10 +10,9 @@ const { returnPromise } = require("../../promises/promise-generator");
  */
 function waitForPromise(promise, action){
   /* IMPLEMENT ME */
-  setTimeout(() => {
-   return Promise(promise)
-    
-  }, action);
+ return promise.then(()=>{
+   action()
+ })
 }
 /**
  * 
@@ -25,6 +24,17 @@ function waitForPromise(promise, action){
  */
 function consumePromise(promise, consumer, handler){
   /* IMPLEMENT ME! */
+ promise
+  .then((data) => {
+    consumer(data)
+  })
+  .catch((error) => {
+    handler(error)
+  })
+
+
+
+
 }
 
 /**

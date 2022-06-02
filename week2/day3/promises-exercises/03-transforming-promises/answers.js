@@ -9,6 +9,16 @@
 function mapPromise(promise, transformer){
   return new Promise((resolve, reject) => {
     /* IMPLEMENT ME!! */
+    promise
+    .then((data)=>{
+      resolve(transformer(data))
+
+    })
+    .catch((error)=>{
+      reject(error)
+    })
+
+
   });
 }
 
