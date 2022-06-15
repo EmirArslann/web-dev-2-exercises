@@ -7,7 +7,10 @@ const taskComplete = [];
 function newTask(title) {
   taskTitles.push(title);
   taskComplete.push(false);
+  
 }
+
+
 
 // Mark a task as complete by setting the task's status in the `taskComplete` array to `true`
 function completeTask(taskIndex) {
@@ -22,6 +25,14 @@ function logTaskState(taskIndex) {
 }
 
 // DRIVER CODE BELOW
+const task1 = newTask(
+  'Clean Cat Litter',
+  'Take all the 💩 out of the litter box'
+);
+const task2 = newTask('Do Laundry', '😨');
+const tasks = [task1, task2];
+console.log(tasks);
+
 
 newTask('Clean Cat Litter'); // task 0
 newTask('Do Laundry'); // task 1
