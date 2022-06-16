@@ -3,36 +3,43 @@
 class Account {
   constructor(username){
     this.username = username;
-    this.balance = 0
+    this.balance = 0;
+    this.Transactions = [];
+    
   }
 
   
 }
 
-class Withdrawal {
-  constructor(account,amount) {
-    this.amount = amount;
-    this.account = account
+class Transaction {
+  constructor(account, amount){
+  this.amount = amount;
+  this.account = account;
   }
 
   commit() {
-    this.account.balance -= this.amount;
-  }
+    this.account.balance += this.value;
+    this.account.Transactions.push(this.value);
 
-
-}
-
-class Deposit {
-  constructor(account , amount){
-    this.amount = amount
-    this.account = account
   }
   
-  commit() {
-    this.account.balance += this.amount
+}
+
+class Withdrawal extends Transaction {
+  get value(){
+    return this.amount * -1
   }
 
+
 }
+
+class Deposit extends Transaction {
+  get value(){
+    return this.amount 
+  }
+}
+
+
 
 // DRIVER CODE BELOW
 // We use the code below to "drive" the application logic above and make sure it's working as expected
