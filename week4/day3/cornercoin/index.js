@@ -16,12 +16,21 @@ class Transaction {
   this.amount = amount;
   this.account = account;
   }
+  isallowed(){
+    if(this.account.balance < this.amount){
+      return false
+
+    }
+  }
 
   commit() {
     this.account.balance += this.value;
     this.account.Transactions.push(this.value);
+    this.isallowed()
 
   }
+  
+  
   
 }
 
