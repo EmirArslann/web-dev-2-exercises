@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    justify-self: center;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    border: 2px solid black;
+}
+
+.post{
+    border: 2px solid black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 5px 5px;
+}
+
+.comms{
+    border-top: 2px solid black;
+    padding: 5px 5px;
+    margin: 0;
+}
